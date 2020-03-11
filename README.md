@@ -1,7 +1,7 @@
 # Welcome to the Alternative-Asset-Management-Hackathon!
 This repo has all the information you need. To get started quickly, here are a few helpful links:
 
-1. Hackathon Instructions Powerpoint
+1. [Hackathon Instructions Powerpoint](https://github.com/Alternative-Asset-Management-Hackathon/Alternative-Asset-Management-Hackathon/raw/master/Alternative-Asset-Management-Hackathon-Instructions.pdf)
 
 2. Hackathon Instructions Video
 

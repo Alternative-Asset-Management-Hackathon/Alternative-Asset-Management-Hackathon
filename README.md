@@ -7,10 +7,10 @@ This repo has all the information you need. To get started quickly, here are a f
 
 3. Example of a Submission
 
-4. [Link to the Hackathon Slack Channel](https://app.slack.com/client/TV7JJFCSG/CV9TXFSVD)
+4. [Hackathon Slack Channel](https://app.slack.com/client/TV7JJFCSG/CV9TXFSVD)
 
-5. [Link to the FAQ](https://www.jackpotinsights.com/alternative-asset-management-hackathon.html)
+5. [FAQ](https://www.jackpotinsights.com/alternative-asset-management-hackathon.html)
 
-6. Link to the (Skype) Kickoff Call at 0900 EST on 21 march
+6. (Skype) Kickoff Call at 0900 EST on 21 march
 
 

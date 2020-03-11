@@ -1,2 +1,2 @@
-# Alternative-Asset-Management-Hackathon
-Repo for the 22-23 March Alternative Asset Management Hackathon
+# Welcome to the Alternative-Asset-Management-Hackathon!
+This repo has all the information you need. 

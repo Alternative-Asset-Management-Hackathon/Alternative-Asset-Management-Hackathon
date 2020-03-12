@@ -5,7 +5,7 @@ This repo has all the information you need. To get started quickly, here are a f
 
 2. Hackathon Instructions Video
 
-3. Example of a Submission
+3. [Example of a Submission](https://github.com/Alternative-Asset-Management-Hackathon/Alternative-Asset-Management-Hackathon/tree/master/example-submission)
 
 4. [Hackathon Slack Channel](https://app.slack.com/client/TV7JJFCSG/CV9TXFSVD)
 

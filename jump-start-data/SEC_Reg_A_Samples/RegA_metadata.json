@@ -1,0 +1,3108 @@
+﻿{
+  "@context": "http://www.w3.org/ns/csvw",
+ 
+  "dialect": {
+
+      "header": true,
+
+      "headerRowCount": 1,
+
+      "delimiter": "\t"
+
+    },
+
+   "tables": [
+
+	{
+
+	"url": "REG_A_SUBMISSION.tsv",
+
+	"tableSchema": {
+
+		"aboutUrl": "RegA_readme.html",
+
+		"primaryKey": "ACCESSION_NUMBER",
+
+		"columns": [
+
+	  	{
+
+		"name": "ACCESSION_NUMBER",
+
+		"titles": [ "ACCESSION NUMBER" ],
+
+		"required": "true",
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 20
+
+			},
+
+		"dc:description": "THE 20-CHARACTER STRING FORMED FROM THE 18-DIGIT NUMBER ASSIGNED BY THE COMMISSION TO EACH EDGAR SUBMISSION."
+
+		},
+		{
+
+		"name": "SUBMISSIONTYPE",
+
+		"titles":["SUBMISSION TYPE"],
+		"required": "true",
+
+		"datatype": {
+
+		   	"base": "string",
+			"maxLength":15
+							
+			},
+
+		"dc:description": "SUBMISSION TYPE: 1-A, 1-A/A, 1-A POS, 1-K, 1-K/A, 1-Z, 1-Z/A."
+
+		},
+
+		{
+		"name": "ISSUERCIK",
+
+		"titles":["ISSUER CIK"],
+
+		"required": "true",
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 10
+
+			},
+
+		"dc:description":"CENTRAL INDEX KEY (CIK) OF ISSUER SUBMITTING THE FILING."
+
+
+		},
+
+		{
+
+		"name": "DOSFILENUMBER",
+
+		"titles":["DOS FILE NUMBER"],
+
+		"datatype": {
+
+		   "base": "string",
+
+   		   "maxLength":17
+		        },
+
+		"dc:description": "FILE NUMBER FROM DRAFT OFFERING STATEMENT SUBMISSION."
+              
+									},
+
+		{
+
+		"name": "OFFERINGFILENUMBER",
+
+		"titles":["OFFERING FILE NUMBER"],
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 17
+			},
+
+		"dc:description":"FILE NUMBER FROM OFFERING SUBMISSION."
+
+		},
+		{
+		"name": "SHELLCOMPANYFLAG",
+
+		"titles":["SHELL COMPANY FLAG"],
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 1
+
+			},
+
+		"dc:description":"YES, IF SHELL COMPANY."
+
+		},
+		{
+
+		"name": "SUCCESSORFILINGFLAG",
+
+		"titles":["SUCCESSOR FILING FLAG"],
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 1
+			},
+
+		"dc:description":"YES, IF SUCCESSOR FILING."
+
+		},
+		{
+		"name": "REPORTINGPERIOD",
+
+		"titles":["REPORTING PERIOD"],
+
+		"datatype": {
+
+		   "base": "DATE (YYYYMMDD)."
+
+		   	},
+
+		"dc:description":"REPORTING PERIOD FOR THE FORM 1-K and 1-K/A SUBMISSION."
+
+		},
+
+		{
+
+		"name": "FILING_DATE",
+
+		"titles":["FILING DATE"],
+
+		"datatype": {
+
+		   "base": "DATE (YYYYMMDD)."
+
+		   	},
+
+		"dc:description":"DATE FILED WITH THE COMMISSION. THE FILING DATE IS SOURCED FROM EDGAR."
+
+		},
+		{
+
+		"name": "FILENUMBER",
+
+		"titles":["FILE NUMBER"],
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 17
+			},
+
+		"dc:description":"FILE NUMBER PROVIDED BY THE COMMISSION SOURCED FROM EDGAR."
+
+		}
+	       ]
+	    }
+	},
+	{
+
+	"url": "REG_A_ISSUER_INFO.tsv",
+
+	"tableSchema": {
+
+	"aboutUrl": "RegA_readme.html",
+
+	"primaryKey":  "ACCESSION_NUMBER" ,
+
+	"columns": [
+
+		{
+
+		"name": "ACCESSION_NUMBER",
+
+		"titles": [ "ACCESSION NUMBER" ],
+
+		"required": "true",
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 20
+			},
+
+		"dc:description": "The 20-character string formed from the 18-digit number assigned by the Commission to each EDGAR submission."
+
+		},
+		{
+
+		"name": "STREET1",
+
+		"titles": [ "STREET 1" ],
+		"required": "true",
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 40
+
+			 },
+
+		"dc:description": "ADDRESS OF PRINCIPAL EXECUTIVE OFFICE: STREET 1."
+
+		},
+		{
+
+		"name": "STREET2",
+
+		"titles": ["STREET 2" ],
+
+		"datatype": {
+
+		   "base": "string",
+
+  		   "maxLength": 40
+
+			 },
+
+		"dc:description": "ADDRESS OF PRINCIPAL EXECUTIVE OFFICE: STREET 2."
+
+		}, 
+
+		{
+
+		"name": "CITY",
+
+		"titles": [ "CITY" ],
+
+		"required": "true",
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 30
+
+			 },
+
+		"dc:description": "ADDRESS OF PRINCIPAL EXECUTIVE OFFICE: CITY."
+
+		},
+		{
+
+		"name": "STATEORCOUNTRY",
+
+		"titles": [ "STATE OR COUNTRY" ],
+
+		"required": "true",
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 2
+
+			},
+
+		"dc:description": "ADDRESS OF PRINCIPAL EXECUTIVE OFFICE: STATE OR COUNTRY CODE."
+
+		},
+		{
+
+		"name": "ZIPCODE",
+
+		"titles": [ "ZIP CODE" ],
+
+		"required": "true",
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 10
+
+		 	},
+		"dc:description": "ADDRESS OF PRINCIPAL EXECUTIVE OFFICE: ZIP/POSTAL CODE."
+
+		},
+
+		{
+			
+		"name": "PHONENUMBER",
+
+		"titles": [ "PHONE NUMBER" ],
+
+		"required": "true",
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 25
+			},
+
+		"dc:description": "ADDRESS OF PRINCIPAL EXECUTIVE OFFICE: PHONE NUMBER."
+
+		},
+
+		{
+
+		"name": "CONNECTIONNAME",
+
+		"titles": [ "CONNECTION NAME" ],
+
+		"required": "true",
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 3
+0
+			 },
+
+		"dc:description": "CONNECTION NAME FOR SEC STAFF TO CONTACT FOR PRE-QUALIFICATION REVIEW OF OFFERING STATEMENT."
+
+		}, 
+
+		{
+
+		"name": "INDUSTRYGROUP",
+
+		"titles":["INDUSTRY GROUP"],
+
+		"required": "true",
+		"datatype": {
+
+		   "base": "string"
+,
+		   "maxLength": 15
+			 },
+
+		"dc:description":"INDUSTRY GROUP: BANKING, INSURANCE, OR OTHER."
+
+		},
+
+		{
+
+		"name": "CASHEQUIVALENTS",
+
+		"titles": ["CASH EQUIVALENTS"],
+
+		"required": "true",
+		"datatype": {
+
+		   "base": "float",
+
+		   "maxLength":13.2
+			 },
+
+		"dc:description": "CASH AND CASH EQUIVALENTS."
+
+		},
+		{
+
+		"name": "INVESTMENTSECURITIES",
+
+		"titles":["INVESTMENT SECURITIES"],
+
+		"datatype": {
+
+		   "base": "float",
+
+		   "maxLength":13.2
+  		         },
+
+		"dc:description": "INVESTMENT SECURITIES."
+
+		},
+
+		{
+
+		"name": "TOTALINVESTMENTS",
+
+		"titles":["TOTAL INVESTMENTS"],
+
+		"datatype": {
+
+		   "base": "float",
+
+		   "maxLength":13.2
+			}
+
+		},
+
+		{
+
+		"name": "ACCOUNTSRECEIVABLE",
+
+		"titles":["ACCOUNTS RECEIVABLE"],
+
+		"datatype": {
+
+		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description":"ACCOUNTS AND NOTES RECEIVABLE."
+
+		},
+		{
+
+		"name": "LOANS",
+
+		"titles":["LOANS"],
+
+		
+"datatype": {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description":"LOANS"
+
+		},
+
+		{
+
+		"name": "PROPERTYPLANTEQUIPMENT",
+
+		"titles":["PROPERTY PLANT EQUIPMENT"],
+
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "PROPERTY, PLANT AND EQUIPMENT (PP&E)."
+
+		},
+
+		{
+
+		"name": "PROPERTYANDEQUIPMENT",
+
+		"titles":["PROPERTY AND EQUIPMENT"],
+
+		
+"datatype": {
+
+		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description"PROPERTY AND EQUIPMENT.""
+
+		}
+,
+		{
+
+		"name": "TOTALASSETS",
+
+		"titles":["TOTAL ASSETS"],
+
+		"required": "true",
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "TOTAL ASSETS"
+
+		},
+
+		{
+
+		"name": "ACCOUNTSPAYABLE",
+
+		"titles":["ACCOUNTS PAYABLE"],
+
+		"required": "true",
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "ACCOUNTS PAYABLE AND ACCRUED LIABILITIES."
+
+		},
+
+		{
+
+		"name": "POLICYLIABILITIESANDACCRUALS",
+
+		"titles":["POLICY LIABILITIES AND ACCRUALS"],
+
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "POLICY LIABILITIES AND ACCRUALS."
+
+		},
+
+		{
+
+		"name": "DEPOSITS",
+
+		"titles":["DEPOSITS"],
+
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "DEPOSITS"
+
+		},
+
+		{
+
+		"name": "LONGTERMDEBT",
+
+		"titles":["LONG TERM DEBT"],
+
+		"required": "true",
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "LONG TERM DEBT."
+
+		},
+
+		{
+
+		"name": "TOTALLIABILITIES",
+
+		"titles":["TOTAL LIABILITIES"],
+
+		"required": "true",
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "TOTAL LIABILITIES."
+
+		},
+
+		{
+
+		"name": "TOTALSTOCKHOLDEREQUITY",
+
+		"titles":["TOTAL STOCK HOLDER EQUITY"],
+
+		"required": "true",
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "TOTAL STOCK HOLDER'S EQUITY."
+
+		},
+
+		{
+
+		"name": "TOTALLIABILITIESANDEQUITY",
+
+		"titles":["TOTAL LIABILITIES AND EQUITY"],
+
+		"required": "true",
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "TOTAL LIABILITIES AND EQUITY."
+
+		},
+
+
+		{
+
+		"name": "TOTALREVENUES",
+
+		"titles":["TOTAL REVENUES"],
+
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "TOTAL REVENUES."
+
+		},
+
+		{
+
+		"name": "TOTALINTERESTINCOME",
+
+		"titles":["TOTAL INTEREST INCOME"],
+
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "TOTAL INTEREST INCOME."
+
+		},
+
+		{
+
+		"name": "COSTANDEXPENSESAPPLTOREVENUES",
+
+		"titles":["COST AND EXPENSES APPL TO REVENUES"],
+
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "COST AND EXPENSES APPLICABLE TO REVENUES."
+
+		},
+
+		{
+
+		"name": "TOTALINTERESTEXPENSES",
+
+		"titles":["TOTAL INTEREST EXPENSES"],
+
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "TOTAL INTEREST EXPENSES."
+
+		},
+
+		{
+
+		"name": "DEPRECIATIONANDAMORTIZATION",
+
+		"titles":["DEPRECIATION AND AMORTIZATION"],
+
+		"required": "true",
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "DEPRECIATION AND AMORTIZATION."
+
+		},
+
+		{
+
+		"name": "NETINCOME",
+
+		"titles":["NET INCOME"],
+
+		"required": "true",
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "NET INCOME."
+
+		},
+
+		{
+
+		"name": "EARNINGSPERSHAREBASIC",
+
+		"titles":["EARNINGS PER SHARE BASIC"],
+
+		"required": "true",
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "EARNINGS PER SHARE - BASIC."
+
+		},
+
+		{
+
+		"name": "EARNINGSPERSHAREDILUTED",
+
+		"titles":["EARNINGS PER SHARE DILUTED"],
+
+		"required": "true",
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "EARNINGS PER SHARE DILUTED."
+
+		},
+
+		{
+
+		"name": "NAMEAUDITOR",
+
+		"titles":["NAME AUDITOR"],
+
+		"datatype":  {
+
+  		   "base": "string",
+
+		   "maxLength":150
+			},
+
+		"dc:description": "NAME OF AUDITOR."
+
+		},
+		{
+
+		"name": "CERTIFYIFTRUE",
+
+		"titles":["CERTIFY IF TRUE"],
+		"required": "true",
+		"datatype":  {
+
+  		   "base": "string",
+
+		   "maxLength":5
+			},
+
+		"dc:description": "CERTIFY IF THE STATEMENTS UNDER ITEM 2: ISSUER ELIGIBILITY ARE TRUE."
+
+		},
+		{
+
+		"name": "CERTIFYIFNOTDISQUALIFIED",
+
+		"titles":["CERTIFY IF NOT DISQUALIFIED"],
+
+		"required": "true",
+		"datatype":  {
+
+  		   "base": "string",
+
+		   "maxLength":5
+			},
+
+		"dc:description": "CERTIFY THAT EACH PERSON DESCRIBER IN RULE 262 OF REGULATION A IS EITHER NOT DISQUALIFIED UNDER THAT RULE OR IS DISQUALIFEID BUT HAS RECEIVED A WAIVER OF SUCH DISQUALIFICATION UNDER ITEM 3: APPLICATION OF RULE 262 IF NOT DISQUALIFIEDIS TRUE."
+
+		},
+		{
+
+		"name": "CERTIFYIFBADACTOR",
+
+		"titles":["CERTIFY IF BAD ACTOR"],
+
+		"datatype":  {
+
+  		   "base": "string",
+
+		   "maxLength":5
+			},
+
+		"dc:description": "CERTIFY IF “BAD ACTOR” DISCLOSURE UNDER RULE 262(d) IS PROVIDED IN PART II OF THE OFFERING STATEMENT UNDER ITEM 3: APPLLICATION OF RULE 262 IS TRUE."
+
+		},
+		{
+
+		"name": "JURISDICTIONSOFSECOFFEREDNONE",
+
+		"titles":["JURISDICTIONS OF SEC OFFERED NONE"],
+
+		"datatype":  {
+
+  		   "base": "string",
+
+		   "maxLength":5
+			},
+
+		"dc:description": "THE JURISDICTIONS OF IN WHICH THE SECURITIES ARE TO BE OFFERED BY UNDERWRITERS, DEALERS OR SALES PERSONS - NONE."
+
+		},
+		{
+
+		"name": "JURISDICTIONSOFSECOFFEREDSAME",
+
+		"titles":["JURISDICTIONS OF SEC OFFERED SAME"],
+
+		"datatype":  {
+
+  		   "base": "string",
+
+		   "maxLength":5
+			},
+
+		"dc:description": "THE JURISDICTIONS IN WHICH THE SECURITIES ARE TO BE OFFERED BY UNDERWRITERS, DEALERS OR SALES PERSONS JURISDICTIONS OF SEC OFFERED – SAME AS THE JURISDICTIONS IN WHICH THE ISSUER INTENDS TO OFFER THE SECURITIES."
+
+		},
+		{
+
+		"name": "IFUNREGISTEREDNONE",
+
+		"titles":["IF UNREGISTERED NONE"],
+
+		"datatype":  {
+
+  		   "base": "string",
+
+		   "maxLength":5
+			},
+
+		"dc:description": "INDICATE THAT NO UNREGISTERED SECURITIES ISSUED OR SOLD WITHIN ONE YEAR."
+
+		},
+		{
+
+		"name": "SECURITIESACTEXCEMPTION",
+
+		"titles":["SECURITIES ACT EXCEMPTION"],
+
+		"datatype":  {
+
+  		   "base": "string",
+
+		   "maxLength":5
+			},
+
+		"dc:description": "SECURITIES ACT EXCEMPTION RELIED UPON AND FACTS RELIED UPON FOR EXEMPTION."
+
+		}
+	       ] 
+
+	     }
+
+	},
+	{
+
+	  "url": "REG_A_EMPLOYEES_INFO.tsv",
+      
+	  "tableSchema": {
+
+		  "aboutUrl": "RegA_readme.html",
+
+		  "primaryKey": [ "EMP_ID","ACCESSION_NUMBER"],
+
+		  "columns": [
+
+		{
+
+		"name": "ACCESSION_NUMBER",
+
+		"titles": [ "ACCESSION NUMBER" ],
+
+		"required": "true",
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 20
+
+			},
+
+		"dc:description": "THE 20-CHARACTER STRING FORMED FROM THE 18-DIGIT NUMBER ASSIGNED BY THE COMMISSION TO EACH EDGAR SUBMISSION."
+
+		},
+		{
+		"name": "EMP_ID",
+
+		"titles": [ "EMP ID" ],
+
+		"required": "true",
+
+		"datatype": {
+
+			"base":"number",
+
+			"minLength": 0,
+			"maxLength": 3
+			},
+		"dc:description": "EMPLOYEE INFO ID INDEX KEY."
+
+		},
+		{
+
+		"name": "ISSUERNAME",
+		"titles": [ "ISSUER NAME" ],
+		"datatype": {
+"base": "string",
+
+			"maxLength": 150
+			},
+
+		"dc:description":"NAME OF ISSUER."
+	
+		},
+		{
+
+		"name": "JURISDICTIONORGANIZATION",
+		"titles": [ "JURISDICTION ORGANIZATION" ],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 2
+			},
+
+		"dc:description":"JURISDICTION ORGANIZATION.IN WHICH THE BUSINESS IS REGISTERED."
+		},
+		{
+		"name": "YEARINCORPORATION",
+
+		"titles": [ "YEAR INCORPORATION" ],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 4
+			},
+		"dc:description": "YEAR OF INCORPORATION."
+
+		},
+		{
+
+		"name": "CIK",
+		"titles": [ "CIK" ],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 10
+			},
+
+		"dc:description":"CENTRAL INDEX KEY (CIK) OF PRIMARY REGISTRANT."
+		},
+		{
+
+		"name": "SICCODE",
+		"titles": [ "SIC CODE" ],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 4
+			},
+
+		"dc:description":"STANDARD INDUSTRIAL CLASSIFICATION CODE."
+		},
+		{
+
+		"name": "FULLTIMEEMPLOYEES",
+		"titles": [ "FULL TIME EMPLOYEES" ],
+
+		"datatype": {
+
+			"base": "number",
+
+			"minLength": 0,
+			"maxLength": 38
+			},
+
+		"dc:description":"NUMBER OF FULL TIME EMPLOYEES."
+		},
+		{
+
+		"name": "PARTTIMEEMPLOYEES",
+		"titles": [ "PART TIME EMPLOYEES" ],
+
+		"datatype": {
+
+			"base": "number",
+
+			"minLength": 0,
+			"maxLength": 38
+			},
+
+		"dc:description":"NUMBER OF PART TIME EMPLOYEES."
+		}
+	      ]
+	    }
+	},
+	{
+
+	  "url": "REG_A_EQUITIES_DEBT.tsv",
+      
+	  "tableSchema": {
+
+		  "aboutUrl": "RegA_readme.html",
+
+		  "primaryKey": [ "ED_ID","ACCESSION_NUMBER"],
+
+		  "columns": [
+
+		{
+
+		"name": "ACCESSION_NUMBER",
+
+		"titles": [ "ACCESSION NUMBER" ],
+
+		"required": "true",
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 20
+
+			},
+
+		"dc:description": "THE 20-CHARACTER STRING FORMED FROM THE 18-DIGIT NUMBER ASSIGNED BY THE COMMISSION TO EACH EDGAR SUBMISSION."
+
+		},
+		{
+		"name": "ED_ID",
+
+		"titles": [ "ED_ID ],
+
+		"required": "true",
+
+		"datatype": {
+
+			"base":"number",
+
+			"minLength": 0,
+			"maxLength": 3},
+		"dc:description": "THE EQUITY OR DEBT SECURITY ID."
+
+		},
+		{
+
+		"name": "TYPE",
+		"titles": [ "TYPE" ],
+		"datatype": {
+"base": "string",
+
+			"maxLength": 15
+			},
+
+		"dc:description":"TYPES OF SECURITIES: COMMON, PREFERRED EQUITY, OR DEBT SECURITIES."
+	
+		},
+		{
+
+		"name": "NAME",
+		"titles": [ "EQUITY OR DEBT SECURITIES CLASS NAME" ],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 30
+			},
+
+		"dc:description":"NAME FOR CLASS OF SECURITIES."
+		},
+		{
+		"name": "OUTSTANDING",
+
+		"titles": [ "OUTSTANDING EQUITY OR DEBT SECURITIES" ],
+
+		"datatype": {
+
+		"base": "number",
+
+			"minLength": 0,
+			"maxLength": 38
+			},
+		"dc:description": "UNITS OUTSTANDING."
+
+		},
+		{
+		"name": "CUSIP",
+
+		"titles": [ "CUSIP EQUITY AND DEBT SECURITIES" ],
+
+		"datatype": {
+
+		"base": "string",
+
+			"maxLength": 10
+			},
+		"dc:description": "CUSIP NUMBER."
+
+		},
+		{
+		"name": "PUBLICLYTRADED",
+
+		"titles": [ "PUBLICLY TRADED EQUITIES OR DEBT SECURITIES" ],
+
+		"datatype": {
+
+		"base": "string",
+
+			"maxLength": 50
+			},
+		"dc:description": "PUBLICLY TRADED: TRADING CENTER OR QUOTATION MEDIUM."
+
+		}
+	      ]
+	    }
+	},
+	{
+
+	  "url": "REG_A_SECURITY_OFFERED.tsv",
+      
+	  "tableSchema": {
+
+		  "aboutUrl": "RegA_readme.html",
+
+		  "primaryKey": ["SO_ID","ACCESSION_NUMBER"],
+
+		  "columns": [
+
+		{
+
+		"name": "ACCESSION_NUMBER",
+
+		"titles": [ "ACCESSION NUMBER" ],
+
+		"required": "true",
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 20
+
+			},
+
+		"dc:description": "THE 20-CHARACTER STRING FORMED FROM THE 18-DIGIT NUMBER ASSIGNED BY THE COMMISSION TO EACH EDGAR SUBMISSION."
+
+		},
+		{
+		"name": "SO_ID",
+
+		"titles": [ "SO_ID" ],
+
+		"required": "true",
+
+		"datatype": {
+
+			"base":"number",
+
+			"minLength": 0,
+			"maxLength": 3
+			},
+		"dc:description": "SECURITIES OFFERED INDEX KEY."
+
+		},
+		{
+
+		"name": "SECURITIESOFFEREDTYPE",
+		"titles": [ "SECURITIES OFFERED TYPE" ],
+		"required": "true",
+
+		"datatype": {
+			
+"base": "string",
+
+			"maxLength": 100
+			},
+
+		"dc:description":"TYPES OF SECURITIES OFFERED IN THE OFFERING STATEMENT: EQUITY (COMMON OR PREFERRED STOCK); DEBT; OPTION, WARRANT OR OTHER RIGHT TO ACQUIRE ANOTHER SECURITY; SECURITY TO BE ACQUIRED UPON EXERCISE OF OPTION, WARRANT OR OTHER RIGHT TO ACQUIRE SECURITY; TENANT-IN-COMMON SECURITIES; OTHER."
+	
+		}
+		{
+
+		"name": "SECURITIESOFFEREDOTHERDESC",
+
+		"titles": [ "SECURITIES OFFERED OTHER DESC" ],
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 255
+
+			 },
+
+		"dc:description": "SECURITIES OFFERED OTHER DESCRIPTION."
+
+		}
+	      ]
+	    }
+	},
+	{
+
+	 "url": "REG_A_SUMMARY_INFO.tsv",
+
+	 "tableSchema": {
+
+		"aboutUrl": "RegA_readme.html",
+
+	     	"primaryKey": [ "ACCESSION_NUMBER","INDICATETIER1TIER2OFFERING" ],
+
+		"columns": [
+
+		{
+
+		"name": "ACCESSION_NUMBER",
+
+		"titles": [ "ACCESSION NUMBER" ],
+
+		"required": "true",
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 20
+
+			},
+
+		"dc:description": "THE 20-CHARACTER STRING FORMED FROM THE 18-DIGIT NUMBER ASSIGNED BY THE COMMISSION TO EACH EDGAR SUBMISSION."
+
+		},
+		{
+
+		"name": "INDICATETIER1TIER2OFFERING",
+
+		"titles": [ "INDICATE TIER1 TIER2 OFFERING" ],
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 5
+
+			 },
+
+		"dc:description": "TRUE, IF INDICATED TIER1 TIER2 OFFERING."
+
+		},
+
+		{
+
+		"name": "FINANCIALSTATEMENTAUDITSTATUS",
+
+		"titles":["FINANCIAL STATEMENT AUDIT STATUS."],
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 15
+
+			 },
+
+		"dc:description": "FINANCIAL STATEMENT AUDIT STATUS."
+
+		},
+
+		{
+
+		"name": "OFFERDELAYEDCONTINUOUSFLAG",
+
+		"titles":["OFFER DELAYED CONTINUOUS FLAG"],
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 1
+			 },
+
+		"dc:description":"OFFERING ON A DELAYED OR CONTINUOUS BASIS."
+
+		},
+
+		{
+
+		"name": "OFFERINGYEARFLAG",
+
+		"titles":["OFFERING YEAR FLAG"],
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 1
+			 },
+
+		"dc:description":"OFFERING TO LAST MORE THAN A YEAR."
+	
+		}, 
+
+		{
+
+		"name": "OFFERINGAFTERQUALIFFLAG",
+
+		"titles":["OFFERING AFTER QUALIF FLAG"],
+
+		"datatype": {
+
+		   "base":"string",
+
+		   "maxLength": 1
+			 },
+
+		"dc:description": "ISSUER INTENDS TO PRICE OFFERING AFTER QUALIFICATION."
+
+		},
+		{
+
+		"name": "OFFERINGBESTEFFORTSFLAG",
+
+		"titles":["OFFERING BEST EFFORTS FLAG"],
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 1
+			},
+
+		"dc:description":"ISSUER CONDUCTING A BEST EFFORTS OFFERING."
+
+		},
+		{
+
+		"name": "SOLICITATIONPROPOSEDOFFERFLAG",
+
+		"titles":["SOLICITATION PROPOSED OFFER FLAG"],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 1
+
+			 },
+
+		"dc:description": "ISSUER USED SOLICITATION OF INTEREST COMMUNICATIONS IN CONNECTION WITH THE PROPOSED OFFERING."
+				
+		},
+
+		{
+
+		"name": "RESALESECURITIESAFFILIATESFLAG",
+
+		"titles":["RESALE SECURITIES AFFILIATES FLAG"],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 1
+
+			 },
+
+		"dc:description": "PROPOSED OFFERING INVOLVES THE RESALE SECURITIES BY AFFILIATES OF THE ISSUER."
+	
+ 		},
+
+		{
+
+		"name": "SECURITIESOFFERED",
+
+		"titles":["SECURITIES OFFERED"],
+
+		"datatype": {
+
+			"base": "number",
+			"minLength":0,
+
+			"maxLength": 38
+			 },
+
+		"dc:description": "NUMBER OF SECURITIES OFFERED."
+
+		},
+
+		{
+		"name": "OUTSTANDINGSECURITIES",
+
+		"titles":["OUTSTANDING SECURITIES"],
+
+		"datatype": {
+
+			"base": "number",
+			"minLength":0,
+
+			"maxLength": 38
+			 },
+
+		"dc:description": "NUMBER OF SECURITIES OF THAT CLASS OUTSTANDING."
+
+		},
+
+		{
+
+		"name": "PRICEPERSECURITY",
+
+		"titles":["PRICE PER SECURITY"],
+
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "PRICE PER SECURITY."
+
+		},
+
+		{
+
+		"name": "ISSUERAGGREGATEOFFERING",
+
+		"titles":["ISSUER AGGREGATE OFFERING"],
+
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "PORTION OF AGGREGATE OFFERING PRICE ATTRIBUTABLE TO THE SECURITIES BEING OFFERED ON BEHALF OF THE ISSUER."
+
+		},
+		{
+
+		"name": "SECURITYHOLDERAGGEGATE",
+
+		"titles":["SECURITY HOLDER AGGREGATE"],
+
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "PORTION OF AGGREGATE OFFERING PRICE ATTRIBUTABLE TO THE SECURITIES BEING OFFERED ON BEHALF OF SELLING SECURITYHOLDERS."
+
+		},
+		{
+
+		"name": "QUALIFICATIONOFFERINGAGGREGATE",
+
+		"titles":["QUALIFICATION OFFERING AGGREGATE"],
+
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "PORTION OF AGGREGATE OFFERING PRICE ATTRIBUTABLE TO ALL THE SECURITIES OF THE ISSUER SOLD PURSUANT TO A QUALIFIED OFFERING STATEMENT WITHIN 12 MONTHS BEFORE QUALIFICATION ON OF THIS OFFERING."
+
+		},
+
+		{
+
+		"name": "CONCURRENTOFFERINGAGGREGATE",
+
+		"titles":["CONCURRENT OFFERING AGGREGATE"],
+
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "ESTIMATED PORTION OF AGGREGATE SALES ATTRIBUTABLE TO SECURITIES THAT MAY BE SOLD PURSUANT TO ANY OTHER QUALIFIED OFFERING STATEMENT CONCURRENTLY WITH SECURITIES BEING SOLD UNDER THIS OFFERING STATEMENT."
+
+		},
+
+		{
+
+		"name": "TOTALAGGREGATEOFFERING",
+
+		"titles":["TOTAL AGGREGATE OFFERING"],
+
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "SUM OF ARREGATE OFFERING PRICES."
+
+		},
+
+		{
+
+		"name": "UNDERWRITERSERVICEPROVIDERNAME",
+
+		"titles":["UNDERWRITER SERVICE PROVIDER NAME"],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength":150
+
+			 },
+
+		"dc:description": "UNDERWRITER SERVICE PROVIDER NAME."
+
+		}, 
+
+
+		{
+
+		"name": "UNDERWRITERSFEES",
+
+		"titles":["UNDERWRITERS FEES"],
+
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "UNDERWRITERS FEES."
+
+		},
+
+		{
+
+		"name": "SALECOMMISSIONSSVCPROVIDERNAME",
+
+		"titles":["SALE COMMISSIONS SVC PROVIDER NAME"],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength":150
+
+			 },
+
+		"dc:description": "SALE COMMISSIONS SERVICE PROVIDER NAME."
+
+		},
+		{
+
+		"name": "SALECOMMISSIONSSVCEROVIDERFEE",
+
+		"titles":["SALE COMMISSIONS SERVICE EROVIDER FEE"],
+
+		"datatype":  {
+
+  		   "base": "float",
+
+		   "maxLength":13.2
+			},
+
+		"dc:description": "SALE COMMISSION FEES."
+
+		},
+
+ 
+
+		{
+
+		"name": "FINDERSFEESSERVICEPROVIDERNAME",
+
+		"titles":["FINDERS FEES SERVICE PROVIDER NAME"],
+
+		"required": "true",
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength":150
+			 }
+,
+		"dc:description": "FINDERS' FEES SERVICE PROVIDER NAME."
+		},
+
+		{
+
+		"name": "FINDERFEESFEE",
+
+		"titles":["FINDER FEES FEE"],
+
+		"datatype": {
+
+			"base": "float",
+
+			"maxLength":13.2	
+			},
+		"dc:description": "FINDER FEES."
+		},
+
+		{
+
+		"name": "AUDITORSERVICEPROVIDERNAME",
+
+		"titles":["AUDITOR SERVICE PROVIDER NAME"],
+
+		"required": "true",
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength":15
+0
+			 },
+
+		"dc:description": "AUDITOR SERVICE PROVIDER NAME."
+
+		}, 
+
+		{
+
+		"name": "AUDITORFEES",
+
+		"titles":["AUDITOR FEES"],
+
+		"datatype": {
+
+			"base": "float",
+
+			"maxLength":13.2
+			 },
+
+		 "dc:description": "AUDITOR FEES."
+
+		},
+		{
+
+		"name": "LEGALSERVICEPROVIDERNAME",
+
+		"titles":["LEGAL SERVICE PROVIDER NAME"],
+
+		"datatype": {
+
+			"base": "string",
+			"maxLength": 150
+			 },
+
+		"dc:description": "LEGAL SERVICE PROVIDER NAME."
+
+		},
+		{
+
+		"name": "LEGALFEES",
+	
+		"titles":["LEGAL FEES"],
+
+		"datatype": {
+
+			"base": "float",
+
+			"maxLength": 13.2
+			 },
+		"dc:description": "LEGAL FEES." 
+		
+},
+		{
+
+		"name": "PROMOTERSSERVICEPROVIDERNAME",
+
+		"titles":["PROMOTERS SERVICE PROVIDER NAME"],
+
+		"required": "true",
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 150
+			 },
+
+		"dc:description": "PROMOTERS SERVICE PROVIDER NAME."
+
+		},
+		{
+
+		"name": "PROMOTERSFEES",
+
+		"titles":["PROMOTERS FEES"],
+		"datatype": {
+
+			"base": "float",
+
+			"maxLength": 13.2
+
+			}'
+		"dc:description": "PROMOTERS FEES."
+
+		},
+		{
+
+		"name": "BLUESKYSERVICEPROVIDERNAME",
+
+		"titles":["BLUE SKY SERVICE PROVIDER NAME"],
+
+		"datatype": {
+
+			"base": "strint",
+
+			"maxLength": 150
+	
+			 },
+		"dc:description": "BLUE SKY SERVICE PROVIDER NAME."
+
+		}, 
+
+		{
+		"name": "BLUESKYFEES",
+
+		"titles":["BLUE SKY FEES"],
+
+
+		"datatype": {
+
+			"base": "float",
+
+			"maxLength": 13.2
+	
+			 },
+
+		"dc:description": "BLUE SKY FEES."
+
+		},
+		{
+
+		"name": "BROKERDEALERCRDNUMBER",
+
+		"titles":["BROKER DEALER CRD NUMBER"],
+	
+		
+"datatype": {
+
+			"base": "string",
+			"maxLength": 25
+			},
+
+		"dc:description": "CRD NUMBER OF ANY BROKER OR DEALER LISTED."
+
+		}, 
+		{
+
+		"name": "ESTIMATEDNETAMOUNT",
+
+		"titles":["ESTIMATED NET AMOUNT"],
+
+		"datatype": {
+
+			"base": "float",
+			"maxLength": 13.2	
+			 },
+
+		"dc:description": "ESTIMATED NET PROCEEDS TO THE ISSUER."
+
+		}, 
+
+		{
+
+		"name": "CLARIFICATIONRESPONSES",
+
+		"titles":["CLARIFICATION RESPONSES"],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 255
+			 },
+		"dc:description": "CLARIFICATION OF RESPONSES."
+
+		}
+
+	    ]
+	
+	  } 
+
+    	},  
+           
+	{
+
+	  "url": "REG_A_JURISDICTION.tsv",
+      
+	  "tableSchema": {
+
+		  "aboutUrl": "RegA_readme.html",
+
+		  "primaryKey": [ "JID","ACCESSION_NUMBER"],
+
+		  "columns": [
+
+		{
+
+		"name": "ACCESSION_NUMBER",
+
+		"titles": [ "ACCESSION NUMBER" ],
+
+		"required": "true",
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 20
+
+			},
+
+		"dc:description": "THE 20-CHARACTER STRING FORMED FROM THE 18-DIGIT NUMBER ASSIGNED BY THE COMMISSION TO EACH EDGAR SUBMISSION."
+
+		},
+		{
+		"name": "JID",
+
+		"titles": [ "JID" ],
+
+		"required": "true",
+
+		"datatype": {
+
+			"base":"string",
+
+			"minLength": 0,
+			"maxLength": 3
+			},
+		"dc:description": "JURISDICTION INDEX KEY."
+
+		},
+		{
+
+		"name": "TYPE",
+		"titles": [ "TYPE" ],
+		"required": "true",
+		"datatype": {
+"base": "string",
+
+			"maxLength": 10
+			},
+
+		"dc:description":"TYPE OF JURISDICTION. ISSSUE: JURISDICTIONS IN WHICH THE ISSUER INTENDS TO OFFER THE SECURITIES.  DEALER: JURISDICTIONS IN WHICH THE SECURITIES ARE TO BE OFFERED BY UNDERWRITERS, DEALERS OR SALESPERSONS."
+	
+		},
+		{
+
+		"name": "ISSUE JURISDICTION OFFERING",
+		"titles": [ "TYPE" ],
+		"datatype": {
+"base": "string",
+
+			"maxLength": 5
+			},
+
+		"dc:description":"STATE OR COUNTRY CODE OF JURISDICTIONS IN WHICH THE SECURITIES ARE TO BE OFFERED."
+	
+		}
+	      ]
+	    }
+	},
+	{
+
+	"url": "REG_A_SECURITY_ISSUED.tsv",
+
+	"tableSchema": {
+
+		"aboutUrl": "RegA_readme.html",
+
+		"primaryKey": [ "SECURITY_ID","ACCESSION_NUMBER"],
+		"columns": [
+
+		{
+
+		"name": "ACCESSION_NUMBER",
+
+		"titles": [ "ACCESSION NUMBER" ],
+
+		"required": "true",
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 20
+			},
+
+		"dc:description": "THE 20-CHARACTER STRING FORMED FROM THE 18-DIGIT NUMBER ASSIGNED BY THE COMMISSION TO EACH EDGAR SUBMISSION."
+
+		},
+		{
+		"name": "SECURITY_ID",
+
+		"titles": [ "SECURITY_ID" ],
+
+		"required": "true",
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 3			
+		  },
+
+		"dc:description": "SECURITY ISSUED INDEX KEY."
+				
+		},
+		{
+
+		"name": "SECURITIESISSUERNAME",
+
+		"titles":["SECURITIES ISSUER NAME"],
+	
+		
+"datatype": {
+
+			"base": "string",
+
+			
+"maxLength": 150	
+		 	 },
+	
+		"dc:description": "NAME OF ISSUER OF UNREGISTERED SECURITIES THAT WERE ISSUED IN LAST YEAR."
+
+		},
+		{
+
+		"name": "SECURITIESISSUERTITLE",
+
+		"titles": ["SECURITIES ISSUER TITLE" ],
+
+		"datatype": {
+
+ 			"base": "string",
+
+			"maxLength": 255
+
+			  },
+
+ 		"dc:description": "TITLE OF UNREGISTERED SECURITIES."
+
+		}, 
+
+		{
+
+		"name": "SECURITIESISSUEDTOTALAMOUNT",
+
+		"titles": [ "SECURITIES ISSUED TOTAL AMOUNT" ],
+		"datatype": {
+
+			"base": "number",
+			"minLength":0,
+		        "maxLength": 38
+	
+			  },
+
+ 		"dc:description": "TOTAL AMOUNT OF SECURITIES ISSUED."
+
+		},
+		{
+
+		"name": "SECURITIESPRINCIPALHOLDERAMT",
+
+		"titles": [ "SECURITIES PRINCIPAL HOLDER AMT" ],
+	
+		"datatype": {
+
+		   	"base":"string",
+			"minLength":0,		
+		        "maxLength": 38
+			  },
+
+		"dc:description": "AMOUNT OF SECURITIES SOLD BY OR FOR THE DIRECTOR, OFFICER, PROMOTER OR PRINCIPAL SECURITY HOLDER OR UNDERWRITER."
+
+		},
+		{
+
+		"name": "SECURITIESISSUEDAGGREGATEAMT",
+
+		"titles": [ "SECURITIES ISSUED AGGREGATE AMT" ],
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 2000
+			  },
+
+		 "dc:description": "ARREGATE CONSIDERATION FOR WHICH THE SECURITIES WERE ISSUED AND THE BASIS FOR COMPUTING THE AMOUNT."
+		},
+		{
+
+		"name": "AGGREGATECONSIDERATIONBASIS",
+
+		"titles": [ "AGGREGATE CONSIDERATION BASIS" ],
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 2000
+			  },
+
+		 "dc:description": "ARREGATE CONSIDERATION FOR WHICH THE SECURITIES WERE ISSUED TO THE DIRECTOR, OFFICER, PROMOTER OR PRINCIPAL SECEURITY HOLDER OR UNDERWRITER AND THE BASIS FOR COMPUTING THE AMOUNT."
+		}
+	      ] 
+	   }
+
+	},
+	{
+
+	  "url": "REG_A_ITEM_KZ.tsv",
+      
+	  "tableSchema": {
+
+		  "aboutUrl": "RegA_readme.html",
+
+		  "primaryKey": ["ACCESSION_NUMBER"],
+
+		  "columns": [
+
+		{
+
+		"name": "ACCESSION_NUMBER",
+
+		"titles": [ "ACCESSION NUMBER" ],
+
+		"required": "true",
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 20
+			},
+
+		"dc:description": "THE 20-CHARACTER STRING FORMED FROM THE 18-DIGIT NUMBER ASSIGNED BY THE COMMISSION TO EACH EDGAR SUBMISSION."
+
+		},
+		{
+		"name": "ISSUERNAME",
+
+		"titles": [ "ISSUER NAME" ],
+
+		"datatype": {
+
+			"base":"string",
+
+			"maxLength": 150
+			},
+		"dc:description": "ISSUER NAME FROM FORM 1-Z."
+
+		},
+		{
+		"name": "FORMINDICATION",
+
+		"titles": [ "FORM INDICATION" ],
+
+		"datatype": {
+
+			"base":"string",
+
+			"maxLength": 50
+			},
+		"dc:description": "FORM INDICATION FROM FORM 1-K."
+
+		},
+		{
+
+		"name": "FISCALYEAREND",
+		"titles": [ "FISCAL YEAR END" ],
+		"datatype": {
+
+			"base": "date"
+
+			},
+
+		"dc:description":"FISCAL YEAR END FROM FORM 1-K."
+	
+		},
+		{
+
+		"name": "STREET1",
+		"titles": [ "STREET 1" ],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 40
+			},
+
+		"dc:description":"ADDRESS OF PRINCIPAL EXECUTIVE OFFICE: STREET 1."
+		},
+		{
+
+		"name": "STREET2",
+		"titles": [ "STREET 2" ],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 40
+			},
+
+		"dc:description":"ADDRESS OF PRINCIPAL EXECUTIVE OFFICE: STREET 2."
+		},
+		{
+
+		"name": "CITY",
+		"titles": [ "CITY" ],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 30
+			},
+
+		"dc:description":"ADDRESS OF PRINCIPAL EXECUTIVE OFFICE: CITY."
+		},
+		{
+
+		"name": "STATEORCOUNTRY",
+		"titles": [ "STATE OR COUNTRY" ],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 2
+			},
+
+		"dc:description":"ADDRESS OF PRINCIPAL EXECUTIVE OFFICE: STATE OR COUNTRY CODE."
+		},
+		{
+
+		"name": "ZIPCODE",
+		"titles": [ "ZIP CODE" ],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 10
+			},
+
+		"dc:description":"ADDRESS OF PRINCIPAL EXECUTIVE OFFICE: ZIP/POSTAL CODE."
+		},
+		{
+
+		"name": "PHONENUMBER",
+		"titles": [ "PHONE NUMBER" ],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 25
+			},
+
+		"dc:description":"ADDRESS OF PRINCIPAL EXECUTIVE OFFICE: PHONE NUMBER."
+		},
+		{
+		"name": "REGARULE257",
+
+		"titles": [ "REGA RULE 257" ],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 5
+			},
+		"dc:description": "IF SUMMARY INFORMATION WAS PREVIOSULY REPORTED IN A MANNGER PERMISSIBLE UNDER RULE 257, THEN TRUE."
+
+		}
+	      ]
+           }
+	{
+
+	  "url": "REG_A_ITEM_INFO_K.tsv",
+      
+	  "tableSchema": {
+
+		  "aboutUrl": "RegA_readme.html",
+
+		  "primaryKey": [ "INFO_ID","ACCESSION_NUMBER"],
+
+		  "columns": [
+
+		{
+
+		"name": "ACCESSION_NUMBER",
+
+		"titles": [ "ACCESSION NUMBER" ],
+
+		"required": "true",
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 20
+			},
+
+		"dc:description": "THE 20-CHARACTER STRING FORMED FROM THE 18-DIGIT NUMBER ASSIGNED BY THE COMMISSION TO EACH EDGAR SUBMISSION."
+
+		},
+		{
+		"name": "INFO_ID",
+
+		"titles": [ "INFO ID" ],
+
+		"required": "true",
+
+		"datatype": {
+
+			"base":"number",
+
+			"minLength": 0,
+			"maxLength": 3},
+		"dc:description": "ITEM INFO INDEX KEY."
+
+		},
+		{
+
+		"name": "ISSUERNAME",
+		"titles": [ "ISSUER NAME" ],
+		"datatype": {
+"base": "string",
+
+			"maxLength": 150
+			},
+
+		"dc:description":"ISSUER NAME."
+	
+		},
+		{
+
+		"name": "CIK",
+		"titles": [ "CIK" ],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 100
+			},
+
+		"dc:description":"CENTRAL INDEX KEY (CIK) OF ISSUER INCLUDED IN THE FILING."
+		},
+		{
+		"name": "JURISDICTIONORGANIZATION",
+
+		"titles": [ "JURISDICTION OR GANIZATION" ],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 2
+			},
+		"dc:description": "JURISDICTION IN WHICH THE BUSINESS IS REGISTERED."
+
+		}
+		
+	      ]
+	    }
+        },
+
+
+	{
+
+	  "url": "REG_A_ITEM_SECURITIES_K.tsv",
+      
+	  "tableSchema": {
+
+		  "aboutUrl": "RegA_readme.html",
+
+		  "primaryKey": [ "SI_ID","ACCESSION_NUMBER"],
+
+		  "columns": [
+
+		{
+
+		"name": "ACCESSION_NUMBER",
+
+		"titles": [ "ACCESSION NUMBER" ],
+
+		"required": "true",
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 20
+
+			},
+
+		"dc:description": "THE 20-CHARACTER STRING FORMED FROM THE 18-DIGIT NUMBER ASSIGNED BY THE COMMISSION TO EACH EDGAR SUBMISSION."
+
+		},
+		{
+		"name": "SI_ID",
+
+		"titles": [ "SI ID" ],
+
+		"required": "true",
+
+		"datatype": {
+
+			"base":"number",
+
+			"minLength": 0,
+			"maxLength": 3},
+		"dc:description": "SECURITIES ITEM INDEX KEY."
+
+		},
+		{
+
+		"name": "ISSUEDSECURITIESTITLE",
+		"titles": [ "ISSUED SECURITIES TITLE" ],
+		"datatype": {
+"base": "string",
+
+			"maxLength": 255
+			},
+
+		"dc:description":"ISSUED SECURITIES TITLE."
+	
+		}
+		
+	      ]
+	    }
+	},
+	{
+
+	"url": "REG_A_SUMMARY_INFO_KZ.tsv",
+        "tableSchema": {
+
+		"aboutUrl": "RegA_readme.html",
+
+		"primaryKey": [ "SINFO_ID","ACCESSION_NUMBER"],
+
+	  	"columns": [
+
+		{
+
+		"name": "ACCESSION_NUMBER",
+
+		"titles": [ "ACCESSION NUMBER" ],
+
+		"required": "true",
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 20
+
+			},
+
+		"dc:description": "THE 20-CHARACTER STRING FORMED FROM THE 18-DIGIT NUMBER ASSIGNED BY THE COMMISSION TO EACH EDGAR SUBMISSION."
+
+		},
+		{
+
+		"name": "SINFO_ID",
+
+		"titles": [ "SINFO_ID" ],
+		"required": "true",
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 3
+
+			 },
+
+		"dc:description": "SUMMARY INFORMATION INDEX KEY."
+					}, 
+		{
+
+		"name": "COMMISSIONFILENUMBER",
+
+		"titles": [ "COMMISSION FILE NUMBER" ],
+
+		"required": "true",
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 17
+			 },
+
+		 "dc:description": "COMMISSION FILE NUMBER OF THE OFFERING STATEMENT."
+
+		}, 
+		{
+
+		"name": "OFFERINGQUALIFICATIONDATE",
+
+		"titles": [ "OFFERING QUALIFICATION DATE" ],
+
+		"datatype": {
+
+			"base": "date"
+
+			},
+
+		"dc:description": "DATE OF QUALIFICATION OF OFFERING STATEMENT."
+
+		},
+		{
+		"name": "OFFERINGCOMMENCEDATE",
+
+		"titles": [ "OFFERING COMMENCE DATE" ],
+
+		"datatype": {
+
+			"base": "date"
+
+			},
+
+		"dc:description": "DATE OF COMMENCEMENT OF OFFERING."
+
+		},
+		{
+
+		"name": "QUALIFIEDSECURITIESSOLD",
+		"titles": [ "QUALIFIED SECURITIES SOLD" ],
+		"datatype": {
+
+			"base": "number",
+
+			"minLength":0,
+			"maxLength": 38
+			},
+		"dc:description": "FORM AND 1-K FORM 1-Z AMOUNT OF SECURITIES QUALIFIED TO BE SOLD IN THIS OFFERING."
+		
+},
+		{
+
+		"name": "OFFERINGSECURITIESSOLD",
+
+		"titles": ["OFFERING SECURITIES SOLD" ],
+
+		"datatype": {
+
+			"base": "number",
+
+			"minLength":0,
+			"maxLength": 38
+			 },
+
+		"dc:description": "FORM 1-K AND FORM 1-Z AMOUNT OF SECURITIES SOLD IN THIS OFFERING."
+		},
+		{
+
+		"name": "PORTIONSECURITIESSOLDISSUER",
+
+		"titles":["PORTION SECURITIES SOLD ISSUER"],
+		"datatype": {
+			"base": "float",
+
+			"maxLength": 13.2
+	
+			},
+
+		"dc:description": "FORM 1-Z PORTION OF AGGREGATE SALES ATTRIBUTABLE TO SECURITIES SOLD ON BEHALF OF THE ISSUER."
+
+		},		{
+
+		"name": "PORTIONSOLDSECURITYHOLDERS",
+
+		"titles":["PORTION SOLD SECURITY HOLDERS"],
+		"datatype": {
+			"base": "float",
+
+			"maxLength": 13.2
+	
+			},
+
+		"dc:description": "FORM 1-Z PORTION OF AGGREGATE SALES ATTRIBUTABLE TO SECURITIES SOLD ON BEHALF OF SELLING SECURITYHOLDERS."
+
+		} 
+
+		{
+
+		"name": "PRICEPERSECURITY",
+
+		"titles":["PRICE PER SECURITY"],
+		"datatype": {
+			"base": "float",
+
+			"maxLength": 13.2
+	
+			},
+PRICE PER SECURITY
+		"dc:description": "PRICE PER SECURITY."
+
+		}, 
+
+		{
+
+		"name": "AGGREGRATEOFFERINGPRICE",
+
+		"titles":["AGGREGRATE OFFERING PRICE"],
+		"datatype": {
+			"base": "float",
+
+			"maxLength": 13.2
+	
+			},
+
+		"dc:description": "FORM 1-K PORTION OF AGGREGATE SALES ATTRIBUTABLE TO SECURTIES SOLD ON BEHALF OF THE ISSUER."
+
+		},
+		{
+
+		"name": "AGGREGRATEOFFERINGPRICEHOLDERS",
+
+		"titles":["AGGREGRATE OFFERING PRICE HOLDERS"],
+		"datatype": {
+			"base": "float",
+
+			"maxLength": 13.2
+	
+			},
+
+		"dc:description": "FORM 1-K PORTION OFAGGREGATE SALES ATTRIBUTABLE TO SECURITIES SOLD ON BEHALF OF SELLING SECURITYHOLDERS."
+
+		},
+		{
+
+		"name": "UNDERWRITERFEES",
+
+		"titles":["UNDERWRITER FEES"],
+		"datatype": {
+			"base": "float",
+
+			"maxLength": 13.2
+	
+			},
+
+		"dc:description": "UNDERWRITER FEES."
+
+		}, 
+ 
+
+		{
+
+		"name": "SALESCOMMISSIONSFEE",
+
+		"titles":["SALES COMMISSIONS FEE"],
+		"datatype": {
+			"base": "float",
+
+			"maxLength": 13.2
+	
+			},
+
+		"dc:description": "SALES COMMISSIONS FEE."
+
+		},
+		{
+
+		"name": "FINDERSFEES",
+
+		"titles":["FINDERS FEES"],
+		"datatype": {
+			"base": "float",
+
+			"maxLength": 13.2
+	
+			},
+
+		"dc:description": "FINDERS' FEES."
+
+		},
+		{
+
+		"name": "AUDITORFEES",
+
+		"titles":["AUDITOR FEES"],
+		"datatype": {
+			"base": "float",
+
+			"maxLength": 13.2
+	
+			},
+
+		"dc:description": "AUDITOR FEES."
+
+		},
+		{
+
+		"name": "LEGALFEES",
+
+		"titles":["LEGAL FEES"],
+		"datatype": {
+			"base": "float",
+
+			"maxLength": 13.2
+	
+			},
+
+		"dc:description": "LEGAL FEES."
+
+		},
+		{
+
+		"name": "PROMOTERSFEES",
+
+		"titles":["PROMOTERS FEES"],
+		"datatype": {
+			"base": "float",
+
+			"maxLength": 13.2
+	
+			},
+
+		"dc:description": "PROMOTERS FEES."
+
+		},
+		{
+
+		"name": "BLUESKYFEES",
+
+		"titles":["BLUE SKY FEES"],
+		"datatype": {
+			"base": "float",
+
+			"maxLength": 13.2
+	
+			},
+
+		"dc:description": "BLUE SKY FEES."
+
+		},
+		{
+
+		"name": "CRDNUMBERBROKERDEALER",
+
+		"titles":["CRD NUMBER BROKER DEALER"],
+		"datatype": {
+			"base": "string",
+
+			"maxLength": 25	
+			},
+
+		"dc:description": "CRD NUMBER OF ANY BROKER OR DEALER LISTED."
+
+		},
+		{
+
+		"name": "ISSUERNETPROCEEDS",
+
+		"titles":["ISSUER NET PROCEEDS"],
+		"datatype": {
+			"base": "float",
+
+			"maxLength": 13.2
+	
+			},
+
+		"dc:description": "AMOUNT OF NET PROCEEDS TO THE ISSUER."
+
+		}, 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	{
+
+		"name": "CLARIFICATIONRESPONSES",
+
+		"titles":["CLARIFICATION RESPONSES"],
+
+		"datatype": {
+			"base":"number",
+
+			"maxLength": 255
+
+			},
+
+		"dc:description": "CLARIFICATION OF RESPONSES."
+
+		},
+	       ]
+
+	     }
+
+        },
+	
+
+{
+
+	  "url": "REG_A_SUMMARY_NAMES_KZ.tsv",
+      
+	  "tableSchema": {
+
+		  "aboutUrl": "RegA_readme.html",
+
+		  "primaryKey": [ "NID","SINFO_ID","NAME_TYPE","ACCESSION_NUMBER"],
+
+		  "columns": [
+
+		{
+
+		"name": "ACCESSION_NUMBER",
+
+		"titles": [ "ACCESSION NUMBER" ],
+
+		"required": "true",
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 20
+
+			},
+
+		"dc:description": "THE 20-CHARACTER STRING FORMED FROM THE 18-DIGIT NUMBER ASSIGNED BY THE COMMISSION TO EACH EDGAR SUBMISSION."
+
+		},
+		{
+		"name": "NID",
+
+		"titles": [ "NID" ],
+
+		"required": "true",
+
+		"datatype": {
+
+			"base":"number",
+
+			"minLength": 0,
+			"maxLength": 3
+			},
+		"dc:description": "SUMMARY NAMES ID INDEX KEY."
+
+		},
+		{
+
+		"name": "SINFO_ID",
+		"titles": [ "SINFO ID" ],
+		"required": "true",
+
+		"datatype": {
+			"base":"number",
+
+			"minLength": 0,
+			"maxLength": 3
+			},
+
+		"dc:description":"SINFO_ID, SUMMARY INFORMATION ID. THE NUMBER ASSIGNED BY THE COMMISSION TO EACH EDGAR SUBMISSION."
+	
+		},
+		{
+
+		"name": "NAME_TYPE",
+		"titles": [ "NAME TYPE" ],
+
+		"required": "true",
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 50
+			},
+
+		"dc:description":"SERVICE PROVIDER TYPE."
+		},
+		{
+		"name": "NAME",
+
+		"titles": ["NAME"],
+
+		"datatype": {
+
+		"base": "string",
+
+			"maxLength": 150
+			},
+		"dc:description": "NAME OF SERVICE PROVIDER."
+
+		}
+	      ]
+	    }
+	},
+	{
+
+	  "url": "REG_A_CERT_SUSPENSION_Z.tsv",
+
+	  "tableSchema": {
+
+		  "aboutUrl": "RegA_readme.html",
+
+		  "primaryKey": [ "CS_ID","ACCESSION_NUMBER"],
+
+		  "columns": [
+
+		{
+
+		"name": "ACCESSION_NUMBER",
+
+		"titles": [ "ACCESSION NUMBER" ],
+
+		"required": "true",
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 20
+
+			},
+
+		"dc:description": "THE 20-CHARACTER STRING FORMED FROM THE 18-DIGIT NUMBER ASSIGNED BY THE COMMISSION TO EACH EDGAR SUBMISSION."
+
+		},
+		{
+		"name": "CS_ID",
+
+		"titles": [ "CS ID" ],
+
+		"required": "true",
+		"datatype": {
+
+			"base":"number",
+
+			"minLength": 0,
+			"maxLength": 3
+			},
+
+		"dc:description": "CERTIFICATION SUSPENSION INDEX KEY."
+								},
+		{
+
+		"name": "SECURITIESCLASSTITLE",
+		"titles": [ "SECURITIES CLASS TITLE" ],
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 255
+			},
+		"dc:description":"TITLE OF EACH CLASS OF SECURITIES COVERED."
+	
+		},
+		{
+
+		"name": "CERTIFICATIONFILENUMBER",
+		"titles": [ "CERTIFICATION FILE NUMBER" ],
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 120
+			},
+
+		"dc:description":"FILE NUMBER OF CLASS OF SECURITIES FOR WHICH A CERTIFICATION OF SUSPENSION OF DUTY TO FILE REPORTS WAS PROVIDED."
+		},
+		{
+		"name": "APPROXRECORDHOLDERS",
+
+		"titles": [ "APPROX RECORD HOLDERS" ],
+
+		"datatype": {
+			"base": "number",
+
+			"minLength": 0,
+			"maxLength": 38
+			},
+		"dc:description": "APPROXIMATE NUMBER OF RECORD HOLDERS."
+
+		}
+	     ] 
+	   }
+	},
+	{
+
+	  "url": "REG_A_SIGNATURE_Z.tsv",
+      
+	  "tableSchema": {
+
+		  "aboutUrl": "RegA_readme.html",
+
+		  "primaryKey": ["SIGN_ID","ACCESSION_NUMBER"],
+
+		  "columns": [
+
+		{
+
+		"name": "ACCESSION_NUMBER",
+
+		"titles": [ "ACCESSION NUMBER" ],
+
+		"required": "true",
+
+		"datatype": {
+
+		   "base": "string",
+
+		   "maxLength": 20
+
+			},
+
+		"dc:description": "THE 20-character STRING FORMED FROM THE 18-DIGIT NUMBER ASSIGNED BY THE COMMISSION TO EACH EDGAR SUBMISSION."
+
+		},
+		{
+		"name": "SIGN_ID",
+
+		"titles": [ "SIGN_ID" ],
+
+		"required": "true",
+
+		"datatype": {
+
+			"base":"number",
+
+			"minLength": 0,
+			"maxLength": 3},
+		"dc:description": "SIGNATURE INDEX KEY."
+
+		},
+		{
+
+		"name": "CIK",
+		"titles": [ "CIK" ],
+		"datatype": {
+			
+"base": "string",
+
+			"maxLength": 10
+			},
+
+		"dc:description":"CENTRAL INDEX KEY (CIK) OF ISSUER."
+	
+		},
+		{
+
+		"name": "REGULATIONISSUERNAME1",
+		"titles": ["REGULATION ISSUER NAME 1"],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 150
+			},
+
+		"dc:description":"NAME OF ISSUER (OR CO-ISSUER) AS SPECIFIED IN CHARTER."
+		},
+		{
+		"name": "REGULATIONISSUERNAME2",
+
+		"titles": [ "REGULATION ISSUER NAME 2"],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 150
+			},
+		"dc:description": "NAME OF ISSUER (OR CO-ISSUER) AS SPECIFIED IN CHARTER."
+
+		},
+		{
+		"name": "SIGNATUREBY",
+
+		"titles": ["SIGNATURE BY"],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 150
+			},
+		"dc:description": "FULL NAME OF INDIVIDUAL SIGNING THE FORM."
+
+		},
+		{
+		"name": "SIGNATURE_DATE",
+
+		"titles": [ "SIGNATURE_DATE" ],
+
+		"datatype": {
+
+			"base": "date"
+
+			},
+		"dc:description": "DATE OF SIGNATURE."
+
+		},
+		{
+		"name": "TITLE",
+
+		"titles": ["TITLE"],
+
+		"datatype": {
+
+			"base": "string",
+
+			"maxLength": 255
+			},
+		"dc:description": "TITLE OF THE PERSON SINGING THE FORM."
+
+		}
+	      ]
+	    }
+	}
+     ]
+}
+	     	

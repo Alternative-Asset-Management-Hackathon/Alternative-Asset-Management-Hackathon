@@ -35,10 +35,6 @@ Has quarterly spreadsheets of each of the companies who have sought <$5M in debt
 
 https://catalog.data.gov/dataset/form-d-data-sets
 
-## IRS.gov
-
-Has tax info for the last several years. This info can be a useful economic indicator of the areas a business may or may not serve.
-
 ## SBA.gov
 
 Like data.gov, there are lots of data sources available through the Small Business Administration. They are, however, somewhat difficult to navigate, so this probably shouldn't be the first place to visit. 

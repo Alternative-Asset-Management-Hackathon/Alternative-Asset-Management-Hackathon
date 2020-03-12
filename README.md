@@ -3,11 +3,11 @@ This repo has all the information you need. To get started quickly, here are a f
 
 1. [Hackathon Instructions Powerpoint](https://github.com/Alternative-Asset-Management-Hackathon/Alternative-Asset-Management-Hackathon/raw/master/Alternative-Asset-Management-Hackathon-Instructions.pdf)
 
-2. Hackathon Instructions Video
+2. [Hackathon Instructions Video](https://www.youtube.com)
 
 3. [Example of a Submission](https://github.com/Alternative-Asset-Management-Hackathon/Alternative-Asset-Management-Hackathon/tree/master/example-submission)
 
-4. [Hackathon Slack Channel](https://app.slack.com/client/TV7JJFCSG/CV9TXFSVD)
+4. [Hackathon Slack Channel](https://join.slack.com/t/alternativeas-eb24591/shared_invite/zt-cood42sg-T8t1bQy7dGa3aUDfyndf~w)
 
 5. [FAQ](https://www.jackpotinsights.com/alternative-asset-management-hackathon.html)
 

@@ -11,6 +11,6 @@ This repo has all the information you need. To get started quickly, here are a f
 
 5. [FAQ](https://www.jackpotinsights.com/alternative-asset-management-hackathon.html)
 
-6. (Skype) Kickoff Call at 0900 EST on 21 march
+6. [(Skype) Kickoff Call at 0900 EST on 21 march](https://zoom.us/j/229709768) 
 
 

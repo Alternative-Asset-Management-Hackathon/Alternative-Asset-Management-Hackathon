@@ -2,7 +2,7 @@
 
 Please note: each team / individual will be required to submit three things to be elegible for the $1K prize at the completion of the hackathon. 
 
-## A list of the companies
+## A list of the companies identified through work
  
 Just a simple list of the companies found that met the criteria outlined for the hackathon. This can be in any of the following formats:
 

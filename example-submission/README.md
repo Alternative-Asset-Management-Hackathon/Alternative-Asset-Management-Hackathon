@@ -1,6 +1,6 @@
 # Example Submission
 
-This directory will contain an example of a completed submission for the hackathon (currently under development). Consider this example the 'MVP,' not the explicit blueprint or desired outcome. Participants are welcomed and encouraged to be as creative as possible in the event. 
+This directory contains an example of a completed submission for the hackathon. Consider this example the 'MVP,' not the explicit blueprint or desired outcome. Participants are welcomed and encouraged to be as creative as possible in the event. 
 
 Please note: each team / individual will be required to submit three things to be elegible for the $1K prize at the completion of the hackathon. 
 

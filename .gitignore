@@ -1,0 +1,6 @@
+# Apple leftovers
+.DS_Store*
+.Spotlight-*
+.Trashes
+.fseventsd
+Thumbs.db

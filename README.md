@@ -13,4 +13,8 @@ This repo has all the information you need. To get started quickly, here are a f
 
 6. [(Zoom) Kickoff Call at 0900 EST on 21 march](https://zoom.us/j/229709768) 
 
+7. [(Zoom) Office Hours at 5pm EST on 21 March](https://zoom.us/j/369266562)
+
+
+
 
